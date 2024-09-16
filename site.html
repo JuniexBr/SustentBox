@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SustentBox - Refeições pré-prontas saudáveis com embalagens sustentáveis que contêm sementes para plantar.">
+    <title>SustentBox - Monte sua Refeição</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 150px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #4caf50;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: #4caf50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        select, input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group .form-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group select {
+            width: 100%;
+        }
+
+        .form-group input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .summary {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src= "logo.png" alt="Logo da SustentBox">
+        <h1>SustentBox</h1>
+        <p>Refeições Saudáveis e Sustentáveis com Embalagens Plantáveis</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#missao">Missão</a>
+        <a href="#visao">Visão</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#montar-refeicao">Monte sua Refeição</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <section id="sobre">
+            <h2 class="section-title">Sobre a SustentBox</h2>
+            <p>A SustentBox é uma loja online focada em oferecer refeições pré-prontas saudáveis, embaladas e enviadas em caixas sustentáveis que contêm sementes para serem plantadas após o consumo. Nossa missão é proporcionar praticidade sem abrir mão da sustentabilidade, promovendo hábitos conscientes e gerando um impacto positivo no planeta.</p>
+        </section>
+
+        <section id="missao">
+            <h2 class="section-title">Nossa Missão</h2>
+            <p>Proporcionar uma experiência completa aos consumidores que buscam praticidade e sustentabilidade. Além de refeições saudáveis, oferecemos a oportunidade de plantar o futuro através de nossas embalagens inovadoras que contêm sementes para plantio.</p>
+        </section>
+
+        <section id="visao">
+            <h2 class="section-title">Nossa Visão</h2>
+            <p>Queremos ser líderes no mercado de refeições pré-prontas com caixas sustentáveis, sendo reconhecidos não apenas pela qualidade dos nossos produtos, mas também pelo compromisso com o meio ambiente. Almejamos criar um ciclo virtuoso em que cada refeição consumida contribua para um impacto positivo no planeta.</p>
+        </section>
+
+        <section id="produtos">
+            <h2 class="section-title">Nossos Produtos</h2>
+            <p>Oferecemos refeições pré-prontas saudáveis, embaladas em caixas biodegradáveis que contêm sementes. Após o consumo, você pode plantar a embalagem, contribuindo para a criação de áreas verdes e para a preservação ambiental.</p>
+            <ul>
+                <li>Refeições naturais e orgânicas</li>
+                <li>Embalagens biodegradáveis e plantáveis</li>
+                <li>Variedade de opções saudáveis para diferentes dietas</li>
+            </ul>
+        </section>
+
+        <div class="container">
+            <section id="montar-refeicao">
+                <h2 class="section-title">Monte sua Refeição</h2>
+                <form id="refeicao-form">
+                    <div class="form-group">
+                        <div class="form-title">Quantidade de Refeições:</div>
+                        <input type="number" id="quantidade" name="quantidade" min="1" value="1" required />
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-title">Escolha sua Proteína:</div>
+                        <select id="proteina" name="proteina" required>
+                            <option value="" data-preco="0">Nenhuma Proteína</option>
+                            <option value="frango" data-preco="15">Frango Grelhado - R$ 15</option>
+                            <option value="carne" data-preco="20">Carne Bovina - R$ 20</option>
+                            <option value="peixe" data-preco="18">Peixe - R$ 18</option>
+                            <option value="tofu" data-preco="12">Tofu (Vegetariano) - R$ 12</option>
+                            <option value="legumes" data-preco="10">Legumes Assados (Vegano) - R$ 10</option>
+                            <option value="seitan" data-preco="14">Seitan (Vegetariano) - R$ 14</option>
+                            <option value="porco" data-preco="17">Porco Assado - R$ 17</option>
+                            <option value="bacon" data-preco="13">Bacon - R$ 13</option>
+                            <option value="almoco-vegano" data-preco="11">Almoço Vegano (Variante) - R$ 11</option>
+                            <option value="carne-de-sol" data-preco="22">Carne de Sol - R$ 22</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-title">Escolha o Acompanhamento:</div>
+                        <select id="acompanhamento" name="acompanhamento" required>
+                            <option value="" data-preco="0">Nenhum Acompanhamento</option>
+                            <option value="arroz-integral" data-preco="5">Arroz Integral - R$ 5</option>
+                            <option value="quinoa" data-preco="6">Quinoa - R$ 6</option>
+                            <option value="batata-doce" data-preco="7">Batata Doce - R$ 7</option>
+                            <option value="legumes" data-preco="6">Legumes Grelhados - R$ 6</option>
+                            <option value="cuscuz" data-preco="5">Cuscuz Marroquino - R$ 5</option>
+                            <option value="pure-abobora" data-preco="5">Purê de Abóbora - R$ 5</option>
+                            <option value="espaguete-integral" data-preco="6">Espaguete Integral - R$ 6</option>
+                            <option value="purê-batata" data-preco="5">Purê de Batata - R$ 5</option>
+                            <option value="mix-vegetal" data-preco="7">Mix de Vegetais - R$ 7</option>
+                            <option value="grão-de-bico" data-preco="6">Grão-de-bico - R$ 6</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-title">Escolha sua Bebida:</div>
+                        <select id="bebida" name="bebida" required>
+                            <option value="" data-preco="0">Nenhuma Bebida</option>
+                            <option value="agua" data-preco="2">Água - R$ 2</option>
+                            <option value="suco-natural" data-preco="8">Suco Natural - R$ 8</option>
+                            <option value="cha-verde" data-preco="4">Chá Verde - R$ 4</option>
+                            <option value="agua-coco" data-preco="6">Água de Coco - R$ 6</option>
+                            <option value="suco-detox" data-preco="9">Suco Detox - R$ 9</option>
+                            <option value="leite-amendoim" data-preco="7">Leite de Amendoim - R$ 7</option>
+                            <option value="refrigerante-natural" data-preco="7">Refrigerante Natural - R$ 7</option>
+                            <option value="suco-laranja" data-preco="8">Suco de Laranja - R$ 8</option>
+                            <option value="leite-almendra" data-preco="6">Leite de Amêndoa - R$ 6</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-title">Escolha sua Salada:</div>
+                        <select id="salada" name="salada">
+                            <option value="" data-preco="0">Nenhuma Salada</option>
+                            <option value="cebola-tomate" data-preco="6">Cebola e Tomate - R$ 6</option>
+                            <option value="mix-verde" data-preco="7">Mix de Folhas Verdes - R$ 7</option>
+                            <option value="cenoura-ralada" data-preco="5">Cenoura Ralada - R$ 5</option>
+                            <option value="brocolis" data-preco="7">Brócolis - R$ 7</option>
+                            <option value="pepino" data-preco="5">Pepino - R$ 5</option>
+                            <option value="beterraba" data-preco="6">Beterraba - R$ 6</option>
+                            <option value="salada-mexicana" data-preco="8">Salada Mexicana - R$ 8</option>
+                            <option value="salada-grega" data-preco="7">Salada Grega - R$ 7</option>
+                            <option value="salada-de-frutas" data-preco="9">Salada de Frutas - R$ 9</option>
+                            <option value="alface-rucula" data-preco="6">Alface e Rúcula - R$ 6</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações:</label>
+                        <textarea id="observacoes" name="observacoes"></textarea>
+                    </div>
+
+                    <button type="button" onclick="calcularTotal()">Calcular Total</button>
+                </form>
+
+                <div class="summary" id="resumo" style="display: none;">
+                    <h3>Resumo do Pedido</h3>
+                    <p id="quantidade-resumo"></p>
+                    <p id="proteina-resumo"></p>
+                    <p id="acompanhamento-resumo"></p>
+                    <p id="bebida-resumo"></p>
+                    <p id="salada-resumo"></p>
+                    <p id="observacoes-resumo"></p>
+                    <h4 id="total">Total: R$ 0,00</h4>
+                    <button onclick="finalizarPedido()">Finalizar Pedido</button>
+                </div>
+            </section>
+
+            <section id="contato">
+                <h2 class="section-title">Contato</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 SustentBox. Todos os direitos reservados.</p>
+            <p>Endereço: João Pessoa, PB, Brasil</p>
+            <p>Email: contato@sustentbox.com.br</p>
+            <p>Telefone: (83) 99999-9999</p>
+        </footer>
+
+        <script>
+            function calcularTotal() {
+                const quantidade = parseInt(document.getElementById('quantidade').value);
+                const proteina = document.getElementById('proteina');
+                const acompanhamento = document.getElementById('acompanhamento');
+                const bebida = document.getElementById('bebida');
+                const salada = document.getElementById('salada');
+
+                const precoProteina = parseFloat(proteina.options[proteina.selectedIndex].dataset.preco);
+                const precoAcompanhamento = parseFloat(acompanhamento.options[acompanhamento.selectedIndex].dataset.preco);
+                const precoBebida = parseFloat(bebida.options[bebida.selectedIndex].dataset.preco);
+                const precoSalada = parseFloat(salada.options[salada.selectedIndex].dataset.preco);
+
+                const total = quantidade * (precoProteina + precoAcompanhamento + precoBebida + precoSalada);
+
+                document.getElementById('quantidade-resumo').innerText = `Quantidade: ${quantidade} refeição(s)`;
+                document.getElementById('proteina-resumo').innerText = `Proteína: ${proteina.options[proteina.selectedIndex].text || 'Nenhuma Proteína'}`;
+                document.getElementById('acompanhamento-resumo').innerText = `Acompanhamento: ${acompanhamento.options[acompanhamento.selectedIndex].text || 'Nenhum Acompanhamento'}`;
+                document.getElementById('bebida-resumo').innerText = `Bebida: ${bebida.options[bebida.selectedIndex].text || 'Nenhuma Bebida'}`;
+                document.getElementById('salada-resumo').innerText = `Salada: ${salada.options[salada.selectedIndex].text || 'Nenhuma Salada'}`;
+                document.getElementById('observacoes-resumo').innerText = `Observações: ${document.getElementById('observacoes').value}`;
+                document.getElementById('total').innerText = `Total: R$ ${total.toFixed(2)}`;
+
+                document.getElementById('resumo').style.display = 'block';
+            }
+
+            function finalizarPedido() {
+                alert('Pedido finalizado com sucesso!');
+            }
+        </script>
+
+        </body>
+        </html>
